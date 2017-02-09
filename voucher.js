@@ -100,11 +100,11 @@ router.post('/', function (req, res, next) { //process
                     },
                     "soapenv:Header": [""],
                     "soapenv:Body": [{
-                        "urn:sayHelloResponse": [{
+                        "urn:getLinkVoucherResponse": [{
                             "$": {
                                 "soapenv:encodingStyle": "http://schemas.xmlsoap.org/soap/encoding/"
                             },
-                            "greeting": [{
+                            "url": [{
                                 "_": results,
                                 "$": {
                                     "xsi:type": "xsd:string"

@@ -1,8 +1,8 @@
 <definitions name="VoucherService"
-   targetNamespace="http://www.examples.com/wsdl/VoucherService.wsdl"
+   targetNamespace="http://www.uv.com/wsdl/VoucherService.wsdl"
    xmlns="http://schemas.xmlsoap.org/wsdl/"
    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-   xmlns:tns="http://www.examples.com/wsdl/VoucherService.wsdl"
+   xmlns:tns="http://www.uv.com/wsdl/VoucherService.wsdl"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
    <message name="GetLinkVoucherRequest">
@@ -28,7 +28,7 @@
    </message>
 
    <portType name="Voucher_PortType">
-      <operation name="sayVoucher">
+      <operation name="getVoucher">
          <input message="tns:GetLinkVoucherRequest"/>
          <output message="tns:GetLinkVoucherResponse"/>
       </operation>
@@ -37,19 +37,19 @@
    <binding name="Voucher_Binding" type="tns:Voucher_PortType">
       <soap:binding style="rpc"
          transport="http://schemas.xmlsoap.org/soap/http"/>
-      <operation name="sayVoucher">
-         <soap:operation soapAction="sayVoucher"/>
+      <operation name="getVoucher">
+         <soap:operation soapAction="getVoucher"/>
          <input>
             <soap:body
                encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
-               namespace="urn:examples:helloservice"
+               namespace="urn:uv:voucherservice"
                use="encoded"/>
          </input>
 
          <output>
             <soap:body
                encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
-               namespace="urn:examples:helloservice"
+               namespace="urn:uv:voucherservice"
                use="encoded"/>
          </output>
       </operation>
