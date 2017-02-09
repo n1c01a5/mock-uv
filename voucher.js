@@ -85,7 +85,7 @@ router.post('/', function (req, res, next) { //process
     ],
         function (err, results) {
             if (err) {
-                results = "I don't know your name";
+                results = "input error";
             }
             //building the response
             var builder = new Builder();
@@ -96,7 +96,7 @@ router.post('/', function (req, res, next) { //process
                         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
                         "xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
                         "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
-                        "xmlns:urn": "urn:examples:helloservice"
+                        "xmlns:urn": "urn:uv:voucherservice"
                     },
                     "soapenv:Header": [""],
                     "soapenv:Body": [{
