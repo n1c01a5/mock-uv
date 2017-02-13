@@ -6,7 +6,7 @@
 
 And run
 
-`npm start`
+`npm app.js`
 
 ## Exemple
 
