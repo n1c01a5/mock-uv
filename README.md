@@ -4,6 +4,10 @@
 
 `npm install`
 
+And run
+
+`npm start`
+
 ## Exemple
 
 Request POST
