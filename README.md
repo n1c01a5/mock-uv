@@ -6,7 +6,7 @@
 
 And run
 
-`npm app.js`
+`node app.js`
 
 ## Exemple
 
