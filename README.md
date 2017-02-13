@@ -13,7 +13,7 @@ And run
 Request POST
 
 ```
-curl -X POST -H "Content-Type: text/xml" -H -d '<soapenv:Envelope
+curl -X POST -H "Content-Type: text/xml" -d '<soapenv:Envelope
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
