@@ -28,11 +28,9 @@ curl -X POST -H "Content-Type: text/xml" -d '<soapenv:Envelope
 				<departureDate>18022013</departureDate>
 				<departureStation>CDG</departureStation>
 			</flight>
-			<passager>
-				<upi xsi:type="xsd:string">006</upi>
-			</passager>
 			<voucher>
 				<amount xsi:type="xsd:string">8</amount>
+        <id xsi:type="xsd:string">8</id>
 			</voucher>
 		</GetLinkVoucher>
 	</soapenv:Body>

@@ -76,7 +76,7 @@ router.post('/', function (req, res, next) { //process
             //logic uv
 
             //return the voucher link
-            cb(null, 'http://universal-voucher.com/get-voucher?token=' + Math.random().toString(36).substring(7));
+            cb(null, 'https://uv.gold/' + Math.random().toString(36).substring(5));
         }
     ],
         function (err, results) {
