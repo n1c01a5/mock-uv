@@ -69,10 +69,6 @@ router.post('/', function (req, res, next) { //process
             var departureDate = myutils.search("departureDate", flight);
             var departureStation = myutils.search("departureStation", flight);
 
-            //passager
-            var passager = myutils.search("passager", getLinkVoucher);
-            var upi = myutils.search("upi", passager);
-
             //voucher
             var voucher = myutils.search("voucher", getLinkVoucher);
             var amount = myutils.search("amount", voucher);

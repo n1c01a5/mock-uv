@@ -1,4 +1,4 @@
-<definitions name="VoucherService"
+<definitions name="ProvideLinkVoucherService"
    targetNamespace="http://www.uv.com/wsdl/VoucherService.wsdl"
    xmlns="http://schemas.xmlsoap.org/wsdl/"
    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
@@ -14,11 +14,8 @@
 				  <part name="departureStation" type="xsd:string"/>
       </flight>
 
-      <passager>
-          <part name="upi" type="xsd:string"/>
-      </passager>
-
       <voucher>
+          <part name="id" type="xsd:string"/>
           <part name="amount" type="xsd:string"/>
       </voucher>
    </message>
@@ -55,7 +52,7 @@
       </operation>
    </binding>
 
-   <service name="Voucher_Service">
+   <service name="Provide_Link_Voucher_Service">
       <documentation>WSDL File for VoucherService</documentation>
       <port binding="tns:Voucher_Binding" name="Voucher_Port">
          <soap:address
