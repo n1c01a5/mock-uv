@@ -4,7 +4,7 @@
   "description": "Mock UV",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --debug-brk"
+    "start": "node app.js"
   },
   "author": "Wagner Nicolas",
   "license": "ISC",
