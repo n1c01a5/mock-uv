@@ -45,7 +45,7 @@ Response
     <soapenv:Header/>
     <soapenv:Body>
         <urn:getLinkVoucherResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-            <url xsi:type="xsd:string">http://universal-voucher.com/get-voucher?token=cypu1cznau35egynwmi</url>
+            <url xsi:type="xsd:string">http://uv.gold/</url>
         </urn:getLinkVoucherResponse>
     </soapenv:Body>
 </soapenv:Envelope>
