@@ -76,7 +76,7 @@ router.post('/', function (req, res, next) { //process
             //logic uv
 
             //return the voucher link
-            cb(null, 'https://u-v.io/' + Math.random().toString(20).substring(5));
+            cb(null, 'https://u-v.io/' + Math.random().toString(20).substring(5).substr(0,5));
         }
     ],
         function (err, results) {
@@ -88,11 +88,6 @@ router.post('/', function (req, res, next) { //process
 
             var jsonresponse = {
                 "soapenv:Envelope": {
-                    "$": {
-                        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-                        "xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
-                        "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/"
-                    },
                     "soapenv:Header": [""],
                     "soapenv:Body": [{
                         "GetLinkVoucherResponse": [{
