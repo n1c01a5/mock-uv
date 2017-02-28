@@ -14,27 +14,26 @@ Request POST
 
 ```
 curl -X POST -H "Content-Type: text/xml" -d '<soapenv:Envelope
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
 >
 	<soapenv:Header/>
 	<soapenv:Body>
-		<GetLinkVoucher>
+		<GetLinkVoucherRequestMessage>
 			<flight>
-				<carrierCode xsi:type="xsd:string">wdorl</carrierCode>
-				<flightNumber xsi:type="xsd:string">006</flightNumber>
-				<arrivalStation>JFK</arrivalStation>
-				<departureDate>18022013</departureDate>
-				<departureStation>CDG</departureStation>
+				<carrierCode type="tns:UVString">world</carrierCode>
+				<flightNumber type="tns:UVString">006</flightNumber>
+				<arrivalStation type="tns:UVString">JFK</arrivalStation>
+				<departureDate type="tns:UVString">18022013</departureDate>
+				<departureStation type="tns:UVString">CDG</departureStation>
 			</flight>
 			<voucher>
-				<amount xsi:type="xsd:string">8</amount>
-        <id xsi:type="xsd:string">8</id>
+				<amount type="tns:UVString">8</amount>
+        <id type="tns:UVString">8</id>
 			</voucher>
-		</GetLinkVoucher>
+		</GetLinkVoucherRequestMessage>
 	</soapenv:Body>
-</soapenv:Envelope>' "http://localhost:3000/voucher?wsdl="
+</soapenv:Envelope>' "https://voucherservice-lmzmcydhxx.now.sh/voucher?wsdl="
 ```
 
 Response
@@ -44,9 +43,9 @@ Response
 <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:examples:helloservice">
     <soapenv:Header/>
     <soapenv:Body>
-        <urn:getLinkVoucherResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-            <url xsi:type="xsd:string">http://uv.gold/</url>
-        </urn:getLinkVoucherResponse>
+        <GetLinkVoucherResponseMessage soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+            <url type="tns:UVString">http://u-v.io/</url>
+        <GetLinkVoucherResponseMessage>
     </soapenv:Body>
 </soapenv:Envelope>
 ```

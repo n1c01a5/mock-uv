@@ -76,7 +76,7 @@ router.post('/', function (req, res, next) { //process
             //logic uv
 
             //return the voucher link
-            cb(null, 'https://uv.gold/' + Math.random().toString(36).substring(5));
+            cb(null, 'https://u-v.io/' + Math.random().toString(20).substring(5));
         }
     ],
         function (err, results) {
@@ -91,19 +91,15 @@ router.post('/', function (req, res, next) { //process
                     "$": {
                         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
                         "xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
-                        "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
-                        "xmlns:urn": "urn:uv:voucherservice"
+                        "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/"
                     },
                     "soapenv:Header": [""],
                     "soapenv:Body": [{
-                        "urn:getLinkVoucherResponse": [{
-                            "$": {
-                                "soapenv:encodingStyle": "http://schemas.xmlsoap.org/soap/encoding/"
-                            },
+                        "GetLinkVoucherResponse": [{
                             "url": [{
                                 "_": results,
                                 "$": {
-                                    "xsi:type": "xsd:string"
+                                    "type": "tns:UVString"
                                 }
                             }
                             ]
