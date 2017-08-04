@@ -1,5 +1,7 @@
 # mock-uv
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/n1c01a5/mock-uv.svg)](https://greenkeeper.io/)
+
 ## Installation
 
 `npm install`
